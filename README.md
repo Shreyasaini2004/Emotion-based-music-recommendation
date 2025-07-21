@@ -24,39 +24,43 @@ Clean & Responsive Design: Custom CSS for improved readability and aesthetics.
 Follow these steps to set up and run the project on your local machine.
 
 Prerequisites
-Before you begin, ensure you have the following installed:
-
+1. Before you begin, ensure you have the following installed:
 Python 3.8+ (Recommended)
-
 pip (Python package installer, usually comes with Python)
 
-Webcam
+2. Webcam
 
-Installation
+3. Installation
 Clone the Repository (or download files):
 If you have a Git repository, clone it:
-
 git clone <your-repository-url>
 cd <your-repository-directory>
 
 Otherwise, ensure all project files (.py scripts, .h5 model, .pkl encoder) are in the same directory.
 
-Create requirements.txt:
+4. Create requirements.txt:
 Create a file named requirements.txt in your project's root directory and add the following lines to it:
 
 streamlit==1.28.1
+
 streamlit-webrtc==0.47.1
+
 opencv-python==4.8.1.78
+
 mediapipe==0.10.7
+
 tensorflow==2.13.0
+
 numpy==1.24.3
+
 Pillow==10.0.1
+
 av==10.0.0
+
 scikit-learn==1.3.0
 
-Create run_project.bat (Windows Only):
+5. Create run_project.bat (Windows Only):
 Create a file named run_project.bat in your project's root directory and add the following content:
-
 @echo off
 echo 🎵 Emotion-Based Music Recommender 🎵
 echo =====================================
