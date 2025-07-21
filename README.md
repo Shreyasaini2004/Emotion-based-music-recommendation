@@ -41,66 +41,97 @@ Otherwise, ensure all project files (.py scripts, .h5 model, .pkl encoder) are i
 4. Create requirements.txt:
 Create a file named requirements.txt in your project's root directory and add the following lines to it:
 
-streamlit==1.28.1
+    streamlit==1.28.1
 
-streamlit-webrtc==0.47.1
+    streamlit-webrtc==0.47.1
 
-opencv-python==4.8.1.78
+    opencv-python==4.8.1.78
 
-mediapipe==0.10.7
+    mediapipe==0.10.7
 
-tensorflow==2.13.0
+    tensorflow==2.13.0
 
-numpy==1.24.3
+    numpy==1.24.3
 
-Pillow==10.0.1
+    Pillow==10.0.1
 
-av==10.0.0
+    av==10.0.0
 
-scikit-learn==1.3.0
+    scikit-learn==1.3.0
 
 5. Create run_project.bat (Windows Only):
 Create a file named run_project.bat in your project's root directory and add the following content:
+
 @echo off
+
 echo 🎵 Emotion-Based Music Recommender 🎵
+
 echo =====================================
+
 echo.
 
 :: Check if virtual environment exists
+
 if not exist "venv" (
+
     echo Creating virtual environment...
+    
     python -m venv venv
+    
 )
 
 :: Activate virtual environment
+
 echo Activating virtual environment...
+
 call venv\Scripts\activate.bat
 
 :: Install dependencies
+
 echo Installing dependencies...
+
 pip install -r requirements.txt
 
 echo.
+
 echo ✅ Setup complete!
+
 echo.
+
 echo Choose an option:
+
 echo 1. Collect emotion data
+
 echo 2. Train model
+
 echo 3. Run main application
+
 echo.
+
 set /p choice=Enter your choice (1-3): 
 
 if "%choice%"=="1" (
+
     echo Starting data collection...
+    
     python data_collection.py
+    
 ) else if "%choice%"=="2" (
+
     echo Starting model training...
+    
     python train_model.py
+    
 ) else if "%choice%"=="3" (
+
     echo Starting main application...
+    
     streamlit run main_app.py
+    
 ) else (
+
     echo Invalid choice. Please run the script again.
+    
 )
 
 pause
