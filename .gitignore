@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Machine Learning model files (can be large, consider LFS if needed)
+emotion_model.h5
+label_encoder.pkl
+emotions.npy
+
+# Collected data (can be very large and might contain sensitive info)
+*_data.npy # This will ignore happy_data.npy, sad_data.npy, etc.
+
+# Environment variables (if you add any later)
+.env
+
+# Streamlit specific files
+.streamlit/
